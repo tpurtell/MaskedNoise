@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, MaskedNoiseActivity!</string>
+    <string name="app_name">Masked Noise</string>
+    <string name="title">White Noise masked at</string>
+    <string name="hz">Hz</string>
+    <string name="volume">Volume</string>
+    <string name="attenuation">Attenuation</string>
+    <string name="bandwidth">Band Width</string>
+    <string name="pct">%</string>
+    <string name="db">dB</string>
+</resources>
