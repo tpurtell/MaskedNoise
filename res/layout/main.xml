@@ -6,26 +6,30 @@
     >
     <RelativeLayout android:layout_height="wrap_content" android:id="@+id/linearLayout1" android:layout_width="fill_parent" android:gravity="center_horizontal">
         <TextView android:layout_width="wrap_content" android:layout_centerVertical="true"  android:layout_height="wrap_content" android:id="@+id/titleView" android:text="@string/title"></TextView>
-        <EditText android:text="1785" android:layout_width="wrap_content" android:layout_toRightOf="@+id/titleView" android:layout_height="wrap_content" android:numeric="integer" android:id="@+id/centerFrequencyView"></EditText>
-        <TextView android:layout_width="wrap_content" android:layout_centerVertical="true" android:layout_height="wrap_content" android:layout_toRightOf="@+id/centerFrequencyView"  android:id="@+id/centerFrequencyUnits" android:text="@string/hz"></TextView>
     </RelativeLayout>
     <TableLayout android:layout_height="wrap_content" android:id="@+id/tableLayout1" android:layout_width="fill_parent" android:stretchColumns="1">
         <TableRow android:id="@+id/tableRow1" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@+id/textView50" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/centerFrequency" android:layout_gravity="center_vertical"></TextView>
+            <SeekBar android:id="@+id/seekCenterFrequency" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_gravity="center_vertical" android:max="20000" android:progress="1785"></SeekBar>
+	        <EditText android:text="1785" android:layout_width="wrap_content" android:layout_toRightOf="@+id/titleView" android:layout_height="wrap_content" android:numeric="integer" android:id="@+id/centerFrequency"></EditText>
+	        <TextView android:layout_width="wrap_content" android:layout_centerVertical="true" android:layout_height="wrap_content" android:layout_toRightOf="@+id/centerFrequency"  android:id="@+id/centerFrequencyUnits" android:text="@string/hz"></TextView>
+        </TableRow>
+        <TableRow android:id="@+id/tableRow1" android:layout_width="fill_parent" android:layout_height="wrap_content">
             <TextView android:id="@+id/textView5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/volume" android:layout_gravity="center_vertical"></TextView>
-            <SeekBar android:id="@+id/seekBar4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_gravity="center_vertical"></SeekBar>
-            <EditText android:text="50" android:id="@+id/editText3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:numeric="integer" android:layout_gravity="center_vertical"></EditText>
+            <SeekBar android:id="@+id/seekVolume" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_gravity="center_vertical" android:max="100" android:progress="50"></SeekBar>
+            <EditText android:text="50" android:id="@+id/volume" android:layout_width="wrap_content" android:layout_height="wrap_content" android:numeric="integer" android:layout_gravity="center_vertical"></EditText>
             <TextView android:id="@+id/textView6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pct" android:layout_gravity="center_vertical"></TextView>
         </TableRow>
         <TableRow android:id="@+id/tableRow2" android:layout_width="fill_parent" android:layout_height="wrap_content">
             <TextView android:id="@+id/textView52" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/attenuation" android:layout_gravity="center_vertical"></TextView>
-            <SeekBar android:id="@+id/seekBar2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_gravity="center_vertical"></SeekBar>
-            <EditText android:text="30" android:id="@+id/editText32" android:layout_width="wrap_content" android:layout_height="wrap_content" android:numeric="decimal" android:layout_gravity="center_vertical"></EditText>
+            <SeekBar android:id="@+id/seekAttenuation" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_gravity="center_vertical" android:max="30" android:progress="20"></SeekBar>
+            <EditText android:id="@+id/attenuation" android:layout_width="wrap_content" android:layout_height="wrap_content" android:numeric="decimal" android:layout_gravity="center_vertical" android:text="20"></EditText>
             <TextView android:id="@+id/textView62" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/db" android:layout_gravity="center_vertical"></TextView>
         </TableRow>
         <TableRow android:id="@+id/tableRow3" android:layout_width="fill_parent" android:layout_height="wrap_content">
             <TextView android:id="@+id/textView53" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/bandwidth" android:layout_gravity="center_vertical"></TextView>
-            <SeekBar android:id="@+id/seekBar3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_gravity="center_vertical"></SeekBar>
-            <EditText android:text="200" android:id="@+id/editText33" android:layout_width="wrap_content" android:layout_height="wrap_content" android:numeric="integer" android:layout_gravity="center_vertical"></EditText>
+            <SeekBar android:id="@+id/seekWidth" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_gravity="center_vertical" android:max="20000"></SeekBar>
+            <EditText android:text="200" android:id="@+id/width" android:layout_width="wrap_content" android:layout_height="wrap_content" android:numeric="integer" android:layout_gravity="center_vertical"></EditText>
             <TextView android:id="@+id/textView63" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/hz" android:layout_gravity="center_vertical"></TextView>
         </TableRow>
     </TableLayout>

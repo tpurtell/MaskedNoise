@@ -20,7 +20,7 @@ public class MonoSourcePlayer implements Runnable {
         		MonoSource.SAMPLE_RATE, 
         		AudioFormat.CHANNEL_OUT_MONO, 
         		AudioFormat.ENCODING_PCM_16BIT, 
-        		samples_.length, 
+        		buffer_size, 
         		AudioTrack.MODE_STREAM);
         //this activates the stream, it shouldn't do anything until we give it data
         //i think (hope) it just pauses when it runs out of data
