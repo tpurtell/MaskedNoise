@@ -84,9 +84,8 @@ public class BandPassWhiteNoiseSource implements MonoSource {
 		//Toast.makeText(MaskedNoiseActivity.context, "kernel range: " + min_freq + " to " + max_freq, Toast.LENGTH_SHORT).show();
 	}
 	
-	@Override
 	public void getSamples(short[] samples) {
-		if(partials_.length * 2 < samples.length) {
+		if(partials_.length < samples.length * 2) {
 			//for now assume that the requested samples get processed into partials
 			//and then extracted from partials
 			throw new RuntimeException("samples must be shorter than partials");
@@ -98,17 +97,19 @@ public class BandPassWhiteNoiseSource implements MonoSource {
 		}
 		for(int i = 0; i < samples.length; ++i) {
 			int partial = partialBase_ + i;
+			if(partial >= partials_.length)
+				partial -= partials_.length;
 			for(int j = 0; j < kernel_.length; ++j) {
 				partials_[partial] += ((int)samples[i] << 8) * (kernel_[j] >> 8);
 				if(++partial >= partials_.length)
-					partial = 0;
+					partial -= partials_.length;
 			}
 		}
 		for(int i = 0; i < samples.length; ++i) {
 			samples[i] = (short)(partials_[partialBase_] >> 16);
 			partials_[partialBase_] = 0;
 			if(++partialBase_ >= partials_.length)
-				partialBase_ = 0;
+				partialBase_ -= partials_.length;
 		}
 	}
 	@Override

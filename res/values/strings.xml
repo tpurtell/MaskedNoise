@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="hello">Hello World, MaskedNoiseActivity!</string>
-    <string name="app_name">Masked Noise</string>
+    <string name="app_name">White Noise Generator</string>
     <string name="title">White Noise - Band Passed</string>
     <string name="hz">Hz</string>
     <string name="centerFrequency">Center</string>
